@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="50dp"
+    android:id="@+id/tela_inicial"
+    tools:context=".MainActivity">
+
+    <!-- Foto de perfil -->
+    <ImageView
+        android:id="@+id/profile_picture"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Foto de perfil"
+        android:src="@drawable/ic_profile_placeholder"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Nombre del usuario -->
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Bruna"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/profile_picture"
+        app:layout_constraintStart_toEndOf="@id/profile_picture"
+        app:layout_constraintTop_toTopOf="@id/profile_picture" />
+
+    <!-- Iconos de visibilidad -->
+    <ImageView
+        android:id="@+id/visibility_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="Icono de visibilidad"
+        android:src="@drawable/ic_visibility"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Saldo actual -->
+    <TextView
+        android:id="@+id/balance_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Saldo atual"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/profile_picture"
+        app:layout_constraintTop_toBottomOf="@id/profile_picture" />
+
+    <TextView
+        android:id="@+id/balance_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="R$ 1.400,00"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/balance_label"
+        app:layout_constraintTop_toBottomOf="@id/balance_label" />
+
+    <!-- Botón de avanzar -->
+    <ImageView
+        android:id="@+id/arrow_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="Botón de avanzar"
+        android:src="@drawable/ic_forward"
+        app:layout_constraintStart_toEndOf="@id/balance_value"
+        app:layout_constraintTop_toTopOf="@id/balance_value" />
+
+
+    <!-- Botón Pix -->
+
+    <!-- Botón Pagamentos -->
+
+    <!-- Botón Shopping PAN -->
+
+    <!-- Botón Empréstimos -->
+
+    <!-- Sección Saúde e Qualidade -->
+
+    <Button
+        android:id="@+id/pix_button"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="88dp"
+        android:background="@drawable/bg_button"
+        android:backgroundTint="@color/black"
+        android:text="Pix"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/balance_value" />
+
+    <Button
+        android:id="@+id/emprestimos_button"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:background="@drawable/bg_button"
+        android:text="Empréstimos"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="parent"
+         />
+
+    <Button
+        android:id="@+id/shopping_button"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/bg_button"
+        android:text="Shopping PAN"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/pix_button" />
+
+    <Button
+        android:id="@+id/pagamentos_button"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="348dp"
+        android:background="@drawable/bg_button"
+        android:text="Pagamentos"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/shopping_button" />
+
+    <TextView
+        android:id="@+id/saude_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:text="Saúde de qualidade pagando apenas R$ 8,99 por mês."
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shopping_button" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="79dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="630dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
