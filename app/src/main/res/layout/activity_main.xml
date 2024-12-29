@@ -22,20 +22,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Texto: "Você ainda pode gastar" -->
-    <TextView
+    <ImageView
         android:id="@+id/elo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:text="elo"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/card_image"
-        app:layout_constraintStart_toStartOf="@+id/card_image"
-        app:layout_constraintTop_toTopOf="@+id/card_image"
-        app:layout_constraintVertical_bias="0.784" />
+        android:layout_width="42dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="13dp"
+        android:src="@drawable/elo"
+        app:layout_constraintBottom_toTopOf="@id/card_number"
+        app:layout_constraintStart_toStartOf="@+id/card_image" />
 
     <TextView
         android:id="@+id/card_number"
@@ -52,8 +46,8 @@
         app:layout_constraintVertical_bias="0.92" />
 
     <ImageView
-        android:layout_width="56dp"
-        android:layout_height="54dp"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="40dp"
         android:src="@drawable/p_pann"
@@ -72,14 +66,13 @@
         app:layout_constraintStart_toStartOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@id/card_image" />
 
-    <!-- Cantidad disponible -->
     <TextView
         android:id="@+id/available_amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="R$ 1.245,00"
         android:textColor="@android:color/holo_blue_light"
-        android:textSize="36sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@id/text_available_to_spend" />
@@ -103,7 +96,7 @@
         android:layout_marginTop="18dp"
         android:text="Sua fatura atual está em:"
         android:textColor="@android:color/darker_gray"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/available_amount" />
@@ -114,7 +107,7 @@
         android:layout_height="wrap_content"
         android:text="R$ 755,00"
         android:textColor="@android:color/black"
-        android:textSize="28sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@id/text_current_invoice" />
@@ -135,9 +128,8 @@
         android:layout_margin="16dp"
         android:max="100"
         android:progress="75"
-        app:layout_constraintTop_toBottomOf="@id/current_invoice_amount"
-        app:layout_constraintStart_toStartOf="@id/guideline"/>
-
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/current_invoice_amount" />
 
 
     <HorizontalScrollView
@@ -160,8 +152,8 @@
                 android:layout_columnWeight="1"
                 android:layout_margin="2dp"
                 android:backgroundTint="@android:color/darker_gray"
-                android:textColor="@color/black"
-                android:text="Conta" />
+                android:text="Conta"
+                android:textColor="@color/black" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -177,8 +169,8 @@
                 android:layout_columnWeight="1"
                 android:layout_margin="2dp"
                 android:backgroundTint="@android:color/darker_gray"
-                android:textColor="@color/black"
-                android:text="Empréstimo" />
+                android:text="Empréstimo"
+                android:textColor="@color/black" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -187,7 +179,7 @@
                 android:layout_margin="2dp"
                 android:backgroundTint="@android:color/darker_gray"
                 android:text="Promoções"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black" />
         </GridLayout>
     </HorizontalScrollView>
 
